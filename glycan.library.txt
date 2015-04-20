@@ -13,7 +13,10 @@ C1(CO)OC(O)C(O)C(O)C1(O)
 [C@@H]1(O)[C@@H](CO)O[C@@H](O)[C@H](O)[C@H]1(O)
 [C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1(O)
 #beta-mannose
-[C@H]1(CO)O[C@@H](O)[C@@H](O)[C@@H](O)[C@@H]1O
-
+#
+[C@H]1(CO)O[C@@H](O)[C@@H](O)[C@@H](O)[C@@H]1(O)
+[C@@H]1(O)[C@@H](CO)O[C@@H](O)[C@@H](O)[C@H]1(O)
+[C@H]1(O)[C@H](O)[C@@H](CO)O[C@@H](O)[C@H]1(O)
+[C@H]1(O)[C@H](O)[C@H](O)[C@@H](CO)O[C@@H]1(O)
 #beta-galactose
-[C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@H]1O
+[C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@H]1(O)
