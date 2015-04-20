@@ -1,0 +1,12 @@
+1. Connect; set angles; total count
+2. Rotate dihedral
+3. Assess OH & dipoles
+4. Ring inversion -> 3
+5. Epimerize -> 3
+6. Anomerize -> 3
+
+#Pathway is implied if inversions, epimerize, anomerize happen post-rotation
+#Rotating an epimer/anomer/inverted monosaccharide may produce different results
+
+7. Compile matrix of each conformer code, major axes lengths (x, y, z), approximate volume
+8. Assess and interpret
