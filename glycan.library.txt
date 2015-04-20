@@ -1,0 +1,19 @@
+#generic hexose - clockwise numbering
+C1(O)C(O)C(O)C(O)C(CO)O1
+C1(O)C(O)C(O)C(CO)OC1(O)
+C1(O)C(O)C(CO)OC(O)C1(O)
+C1(O)C(CO)OC(O)C(O)C1(O)
+C1(CO)OC(O)C(O)C(O)C1(O)
+#beta-glucose
+#The ring connecting atoms have opposite stereochemistry than when they are not ring-numbered
+#Approach direction determines the R,S assignment. If the string starts with C5, then C@H for beta-glucose
+[C@H]1(O)[C@H](O)[C@@H](CO)O[C@@H](O)[C@@H]1(O)
+[C@@H]1(O)[C@@H](O)[C@H](O)[C@@H](CO)O[C@H]1(O)
+[C@H]1(O)[C@H](O)[C@@H](CO)O[C@@H](O)[C@@H]1(O)
+[C@@H]1(O)[C@@H](CO)O[C@@H](O)[C@H](O)[C@H]1(O)
+[C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1(O)
+#beta-mannose
+[C@H]1(CO)O[C@@H](O)[C@@H](O)[C@@H](O)[C@@H]1O
+
+#beta-galactose
+[C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@H]1O
