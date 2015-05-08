@@ -7,7 +7,7 @@ C1(CO)OC(O)C(O)C(O)C1(O)
 #beta-glucose
 #The ring connecting atoms have opposite stereochemistry than when they are not ring-numbered
 #Approach direction determines the R,S assignment. If the string starts with C5, then C@H for beta-glucose
-[C@H]1(O)[C@H](O)[C@@H](CO)O[C@@H](O)[C@@H]1(O)
+[C@@H]1(O)[C@@H](O)[C@H]1(O)[C@H](O)[C@@H](CO)O1
 [C@@H]1(O)[C@@H](O)[C@H](O)[C@@H](CO)O[C@H]1(O)
 [C@H]1(O)[C@H](O)[C@@H](CO)O[C@@H](O)[C@@H]1(O)
 [C@@H]1(O)[C@@H](CO)O[C@@H](O)[C@H](O)[C@H]1(O)
@@ -20,3 +20,19 @@ C1(CO)OC(O)C(O)C(O)C1(O)
 [C@H]1(O)[C@H](O)[C@H](O)[C@@H](CO)O[C@@H]1(O)
 #beta-galactose
 [C@H]1(CO)O[C@@H](O)[C@H](O)[C@@H](O)[C@H]1(O)
+#
+#
+#
+#
+#
+#Attaching by number
+#1-4 linkage between two beta-Glu
+#Change numbers in monomer 2 to begin at 1 more than the largest number in monomer 1
+#paste0() both monomers and collapse with "."
+#place next digit (larger than all others currently available) on 1-oxygen on incoming monomer (1) (first monomer)
+#replace 4-oxygen on outgoing monomer (2) with identically-valued digit as the one on monomer 1.
+#The number in monomer 1 is 1. The number in monomer 2 is 2. The linkage number is 3. 
+#The linkage number 3 is on anomeric O on monomer 1 and has replaced the 4-Oxygen on monomer 2, signifying a 1->4 linkage.
+#The "." character denotes unconnectedness.
+[C@@H]1(O3)[C@@H](O)[C@H](O)[C@H](O)[C@@H](CO)O1.[C@@H]2(O)[C@@H](O)[C@H](O)[C@H]3[C@@H](CO)O2
+#Check stereochemistry? How is stereochemistry affected?
