@@ -10,7 +10,7 @@ glycanbuild<-function(glycanstring){
      
      glycanstring<-as.character(glycanstring)
 
-library<-
+     strsplit(glycanstring,"\\([abAB]-[0-9]")
      
      
 }
