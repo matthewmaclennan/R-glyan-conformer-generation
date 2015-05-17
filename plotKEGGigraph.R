@@ -21,6 +21,8 @@ edgelist.ig<-graph.edgelist(edgenodelist)
 #Insert labels into edgelist
 E(edgelist.ig)$labels<-edgelabels
 V(edgelist.ig)$labels<-NODES[,1]
+V(edgelist.ig)$x<-as.numeric(NODES[,2])
+V(edgelist.ig)$y<-as.numeric(NODES[,3])
 plot(edgelist.ig,edge.label=E(edgelist.ig)$labels,vertex.label=V(edgelist.ig)$labels)
 #plot does not have angles programmed into it yet.
 matches<-as.matrix(strsplit(glycanmatch,"\n")[[1]])
