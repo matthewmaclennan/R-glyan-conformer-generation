@@ -1,8 +1,7 @@
+plotKEGGigraph<-function(URL){
 #extract node-edge data from glycan info to make graphs in igraph package
-glycanmatch<-regmatches(getURL("http://rest.kegg.jp/get/gl:G00003"),
-gregexpr("NODE.*EDGE.*///",getURL("http://rest.kegg.jp/get/gl:G00003")))[[1]]
-#remove "\n" and display neatly
-match<-as.matrix(strsplit(glycanmatch,"\n")[[1]])
+glycanmatch<-regmatches(getURL(URL),
+gregexpr("NODE.*EDGE.*///",getURL(URL)))[[1]]
 #Find "NODE" and "EDGE" labels
 n<-grep("NODE",strsplit(glycanmatch,"\n")[[1]])
 e<-grep("EDGE",strsplit(glycanmatch,"\n")[[1]])
@@ -24,3 +23,5 @@ E(edgelist.ig)$labels<-edgelabels
 V(edgelist.ig)$labels<-NODES[,1]
 plot(edgelist.ig,edge.label=E(edgelist.ig)$labels,vertex.label=V(edgelist.ig)$labels)
 #plot does not have angles programmed into it yet.
+list(edgelist.ig,glycanmatch)
+}
