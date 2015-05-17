@@ -17,11 +17,12 @@ edgenodelist<-matrix(as.numeric(unlist(apply(EDGES,1,function(x) strsplit(x,":[A
 edgelabels<-as.matrix(ldply(strsplit(apply(EDGES,1,function(x) paste0(x,collapse="-")),"(?<=-)[0-9]|[0-9]*:",perl=T),
 function(x) paste0(x,collapse="")))
 #Create igraph object
-edgelist.ig<-graph.edgelist(edgelist)
+edgelist.ig<-graph.edgelist(edgenodelist)
 #Insert labels into edgelist
 E(edgelist.ig)$labels<-edgelabels
 V(edgelist.ig)$labels<-NODES[,1]
 plot(edgelist.ig,edge.label=E(edgelist.ig)$labels,vertex.label=V(edgelist.ig)$labels)
 #plot does not have angles programmed into it yet.
-list(edgelist.ig,glycanmatch)
+matches<-as.matrix(strsplit(glycanmatch,"\n")[[1]])
+list(edgelist.ig,matches,edgenodelist,NODES,EDGES)
 }
