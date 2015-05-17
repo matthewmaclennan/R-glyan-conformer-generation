@@ -14,8 +14,8 @@ EDGES<-as.matrix(ldply(strsplit(strsplit(glycanmatch,"\n")[[1]][(e+1):(length(st
 #actual nodes connectivity list in order (edgelist ready for igraph)
 edgenodelist<-matrix(as.numeric(unlist(apply(EDGES,1,function(x) strsplit(x,":[AaBb][0-9]{,2}|:[0-9]+")))),ncol=2,byrow=T)
 #actual edge labels (alpha/beta and conectivity)
-edgelabels<-as.matrix(ldply(strsplit(apply(EDGES,1,function(x) paste0(x,collapse="-")),"(?<=-)[0-9]|[0-9]*:",perl=T),
-function(x) paste0(x,collapse="")))
+edgelabels<-as.matrix(ldply(strsplit(apply(EDGES,1,function(x) paste0(x,collapse="-")),
+"[0-9]*:|^[0-9](?=-)|(?<=-)[0-9]$",perl=T),function(x) paste0(x,collapse="")))
 #Create igraph object
 edgelist.ig<-graph.edgelist(edgenodelist)
 #Insert labels into edgelist
