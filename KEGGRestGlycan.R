@@ -12,3 +12,6 @@ function(x) x[-1]))[,-1]
 #EDGES matrix
 EDGES<-as.matrix(ldply(strsplit(strsplit(glycanmatch,"\n")[[1]][(e+1):(length(strsplit(glycanmatch,"\n")[[1]])-1)]," +"),
 function(x) x[-1]))[,-1]
+#position string
+posstring<-paste0(unlist(lapply(strsplit(strsplit(glycanmatch,"\n")[[1]][(e+1):(length(strsplit(glycanmatch,"\n")[[1]])-1)]," +"),
+function(x) x[-c(1,2)])),collapse="")
