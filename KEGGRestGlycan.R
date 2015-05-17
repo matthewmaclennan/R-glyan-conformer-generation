@@ -17,7 +17,7 @@ edgelist<-matrix(as.numeric(unlist(apply(EDGES,1,function(x) strsplit(x,":[AaBb]
 #actual edge labels (alpha/beta and conectivity)
 edgelabels<-as.matrix(ldply(strsplit(apply(EDGES,1,function(x) paste0(x,collapse="-")),"[0-9]+:"),
   function(x) paste0(x,collapse="")))
-
+plot(graph.edgelist(edgelist))
 #position string
 posstring<-paste0(unlist(lapply(strsplit(strsplit(glycanmatch,"\n")[[1]][(e+1):(length(strsplit(glycanmatch,"\n")[[1]])-1)]," +"),
 function(x) x[-c(1,2)])),collapse="")
